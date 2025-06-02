@@ -50,7 +50,6 @@ with st.expander("4. Évaluation cardiovasculaire"):
     coronaropathie = "Non"
     if coronarien == "Oui":
         coronaropathie = st.radio("Stabilité de la coronaropathie", ["Coronaropathie stable", "Coronaropathie instable"], horizontal=True)
-    st.radio("FA", ["Oui", "Non"], horizontal=True)
     st.markdown("**Score de Lee (facteurs cliniques)**")
     lee_score = sum([
         st.checkbox("Chirurgie à haut risque"),
@@ -62,9 +61,8 @@ with st.expander("4. Évaluation cardiovasculaire"):
     ])
     st.markdown(f"**Score de Lee clinique : {lee_score}**")
     met = st.selectbox("Capacité fonctionnelle (MET)", ["MET < 4", "MET ≥ 4", "MET inévaluable"])
-    st.checkbox("ECG disponible")
-    st.checkbox("Échographie cardiaque disponible")
-    test = st.radio("Test d’ischémie réalisé ?", ["Test d’ischémie positif", "Test d’ischémie négatif", "Test d’ischémie douteux", "Non réalisé"], horizontal=True)
+    st.markdown("**Test d’ischémie**")
+    test = st.radio("Test d’ischémie réalisé ?", ["Non réalisé", "Test d’ischémie positif", "Test d’ischémie négatif", "Test d’ischémie douteux"], horizontal=True)
 
 # Appel fonction de recommandation
 if st.button("Générer la recommandation"):
