@@ -1,0 +1,16 @@
+{
+    "Chirurgie urgente": "C02",
+    "Risque faible": "C03.1",
+    "Risque modéré": "C03.2",
+    "Risque élevé": "C03.3",
+    "chirurgie vasculaire": "C04",
+    "Coronaropathie stable": "CV05.1",
+    "Coronaropathie instable": "CV05.2",
+    "Score de Lee": "CV02.1",
+    "MET < 4": "CV03.1",
+    "MET ≥ 4": "CV03.2",
+    "MET inévaluable": "CV03.3",
+    "Test d’ischémie positif": "X03.02",
+    "Test d’ischémie négatif": "X03.01",
+    "Test d’ischémie douteux": "X03.03"
+}
