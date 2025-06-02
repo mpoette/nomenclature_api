@@ -16,13 +16,13 @@ identities = [
     {"nom": "Moreau", "prenom": "Isabelle", "ddn": "1990-06-30", "sexe": "F"}
 ]
 
-# Liste d'interventions pour autocomplétion
+# Exemple d'interventions
 chirurgies = [
     "Prothèse totale de hanche", "Colectomie droite", "Hystérectomie","Lobectomie pulmonaire",
     "Néphrectomie partielle", "Thyroïdectomie", "Pontage aorto-bifémoral", "Pontage carotidien"
 ]
 
-# Liste d'interventions vasculaires (exhaustive à compléter si besoin)
+# Liste d'interventions vasculaires (non fonctionnel...)
 chirurgies_vasculaires = ["Pontage aorto-bifémoral", "Pontage carotidien", "Endartériectomie fémorale"]
 
 if "identity" not in st.session_state:
@@ -66,7 +66,7 @@ with st.expander("4. Évaluation cardiovasculaire"):
     st.checkbox("Échographie cardiaque disponible")
     test = st.radio("Test d’ischémie réalisé ?", ["Test d’ischémie positif", "Test d’ischémie négatif", "Test d’ischémie douteux", "Non réalisé"], horizontal=True)
 
-# Bloc déclenchement reco
+# Appel fonction de recommandation
 if st.button("Générer la recommandation"):
     inputs = {
         "Chirurgie urgente": "Chirurgie urgente" if urgence == "Oui" else "",

@@ -1,7 +1,7 @@
 def reco_engine_sfar(codes):
     reco = []
 
-    # Étape 1 : chirurgie urgente
+    # Chirurgie urgente?
     if codes.get("C02") == "oui":
         reco.append("Chirurgie urgente : procéder sans examen complémentaire. Optimiser le traitement médical en péri-opératoire.")
         return reco
